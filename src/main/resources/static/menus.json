@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Authentication",
+    "code": "Auth",
+    "children": [
+      {
+        "name": "Users",
+        "code": "User",
+        "buttons": [
+          {
+            "name": "Add",
+            "code": "User.btn.add"
+          },
+          {
+            "name": "Remove",
+            "code": "User.btn.remove"
+          },
+          {
+            "name": "Assignment",
+            "code": "User.btn.assgin"
+          }
+        ]
+      },
+      {
+        "name": "Role Management",
+        "path": "role/list",
+        "code": "Role",
+        "buttons": [
+          {
+            "name": "Reomve",
+            "code": "Role.btn.remove"
+          },
+          {
+            "name": "Role Assignment",
+            "code": "Role.btn.assgin", 
+            "toCode": "RoleAuth"
+          }
+        ]
+      },
+      {
+        "name": "List",
+        "path": "code/list",
+        "code": "code", 
+        "buttons": [
+          {
+            "name": "Add",
+            "code": "code.btn.add"
+          },
+          {
+            "name": "Update",
+            "code": "code.btn.update"
+          },
+          {
+            "name": "Remove",
+            "code": "code.btn.remove"
+          }
+        ]
+      }
+    ]
+  }
+]
