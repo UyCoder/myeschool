@@ -1,4 +1,4 @@
-# E-School Management System
+**# E-School Management System
 A web-based system for managing and tracking student and teacher information at the grade and class level. The system utilizes a front-end design using HTML, CSS, and VUE for displaying page effects, and a back-end built with SpringBoot and MybatisPlus for data storage and services. Data is stored in a high-performance MySQL database, and the server utilizes Tomcat 9.x as provided by SpringBoot. The project is managed using Maven for managing jar packages and building the project.
 
 ## Features
@@ -43,5 +43,5 @@ We use ```SemVer``` for versioning. For the versions available, see the tags on 
 ## Authors
 - Ahmed Bughra
 
-See also the list of contributors who participated in this project.
+See also the list of contributors who participated in this project.**
 
