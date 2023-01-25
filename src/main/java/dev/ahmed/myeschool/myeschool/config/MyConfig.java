@@ -19,6 +19,7 @@ public class MyConfig {
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+
         // paginationInterceptor.setLimit(Your maximum limit on a single page, the default is 500, less than 0 such as -1 is unlimited);
         return paginationInterceptor;
     }

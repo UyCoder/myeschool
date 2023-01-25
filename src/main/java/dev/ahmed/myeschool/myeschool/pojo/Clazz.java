@@ -11,9 +11,11 @@ import lombok.NoArgsConstructor;
  * @create 2023-01-23  9:53 PM
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @TableName("tb_clazz")
 public class Clazz {
-        //班级信息
+
         @TableId(value = "id",type = IdType.AUTO)
         private Integer id;
         private String name;
