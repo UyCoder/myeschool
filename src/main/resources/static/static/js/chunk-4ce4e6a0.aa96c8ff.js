@@ -28,15 +28,15 @@
                         label: "账号绑定",
                         name: "account"
                     }
-                }, [s("ul", [s("li", [s("p", {staticClass: "title"}, [e._v("修改密码")]), s("p", {staticClass: "desc"}, [e._v(" 修改个人密码 "), s("a", {
+                }, [s("ul", [s("li", [s("p", {staticClass: "title"}, [e._v("Update Password")]), s("p", {staticClass: "desc"}, [e._v(" 修改个人密码 "), s("a", {
                     attrs: {href: "javascript:void(0)"},
                     on: {click: e.showPwdUpdate}
-                }, [e._v("修改密码")])])]), s("li", [s("p", {staticClass: "title"}, [e._v("修改其它信息")]), s("p", {staticClass: "desc"}, [e._v(" 修改其它个人信息 "), s("a", {
+                }, [e._v("Update Password")])])]), s("li", [s("p", {staticClass: "title"}, [e._v("修改其它信息")]), s("p", {staticClass: "desc"}, [e._v(" 修改其它个人信息 "), s("a", {
                     attrs: {href: "javascript:void(0)"},
                     on: {click: e.showUserUpdate}
-                }, [e._v("立即修改")])])])])])], 1)], 1)])], 1), s("el-dialog", {
+                }, [e._v("Update Immediately")])])])])])], 1)], 1)])], 1), s("el-dialog", {
                     attrs: {
-                        title: "修改密码",
+                        title: "Update Password",
                         visible: e.dialogVisible,
                         width: "40%"
                     }, on: {
@@ -48,10 +48,10 @@
                     ref: "form",
                     staticStyle: {width: "90%"},
                     attrs: {model: e.form, rules: e.rules, "label-width": "100px"}
-                }, [s("el-form-item", {attrs: {label: "原密码", prop: "oldPwd"}}, [s("el-input", {
+                }, [s("el-form-item", {attrs: {label: "Old Password", prop: "oldPwd"}}, [s("el-input", {
                     attrs: {
                         type: "password",
-                        placeholder: "请输入原密码"
+                        placeholder: "Please Enter Old Password"
                     }, model: {
                         value: e.form.oldPwd, callback: function (t) {
                             e.$set(e.form, "oldPwd", t)
@@ -59,11 +59,11 @@
                     }
                 })], 1), s("el-form-item", {
                     attrs: {
-                        label: "新密码",
+                        label: "New Password",
                         prop: "newPwd"
                     }
                 }, [s("el-input", {
-                    attrs: {type: "password", placeholder: "请输入新密码"},
+                    attrs: {type: "password", placeholder: "Please Enter New Password"},
                     model: {
                         value: e.form.newPwd, callback: function (t) {
                             e.$set(e.form, "newPwd", t)
@@ -71,11 +71,11 @@
                     }
                 })], 1), s("el-form-item", {
                     attrs: {
-                        label: "确认密码",
+                        label: "Confirm Password",
                         prop: "newPwd2"
                     }
                 }, [s("el-input", {
-                    attrs: {type: "password", placeholder: "请输入确认密码"},
+                    attrs: {type: "password", placeholder: "Enter Password"},
                     model: {
                         value: e.form.newPwd2, callback: function (t) {
                             e.$set(e.form, "newPwd2", t)
@@ -84,12 +84,12 @@
                 })], 1)], 1), s("div", {
                     attrs: {slot: "footer"},
                     slot: "footer"
-                }, [s("el-button", {on: {click: e.reset}}, [e._v("重置")]), s("el-button", {
+                }, [s("el-button", {on: {click: e.reset}}, [e._v("Edit")]), s("el-button", {
                     attrs: {type: "primary"},
                     on: {click: e.confirm}
-                }, [e._v("确 定")])], 1)], 1), s("el-dialog", {
+                }, [e._v("Confirm")])], 1)], 1), s("el-dialog", {
                     attrs: {
-                        title: "修改" + e.userInfo.name + "的信息",
+                        title: "Update" + e.userInfo.name + "'s Information",
                         visible: e.userDialogVisible,
                         width: "40%"
                     }, on: {
@@ -103,11 +103,11 @@
                     attrs: {model: e.userForm, rules: e.userRules, "label-width": "100px"}
                 }, [s("el-form-item", {
                     attrs: {
-                        label: "姓名",
+                        label: "Name",
                         prop: "name"
                     }
                 }, [s("el-input", {
-                    attrs: {placeholder: "请输入姓名"},
+                    attrs: {placeholder: "Insert Name"},
                     model: {
                         value: e.userForm.name, callback: function (t) {
                             e.$set(e.userForm, "name", t)
@@ -115,11 +115,11 @@
                     }
                 })], 1), s("el-form-item", {
                     attrs: {
-                        label: "性别",
+                        label: "Gender",
                         prop: "gender"
                     }
                 }, [s("el-select", {
-                    attrs: {placeholder: "请选择性别"},
+                    attrs: {placeholder: "Please Enter Gender"},
                     model: {
                         value: e.userForm.gender, callback: function (t) {
                             e.$set(e.userForm, "gender", t)
@@ -132,11 +132,11 @@
                     }
                 })], 1)], 1), s("el-form-item", {
                     attrs: {
-                        label: "邮箱",
+                        label: "Email",
                         prop: "email"
                     }
                 }, [s("el-input", {
-                    attrs: {placeholder: "请输入邮箱"},
+                    attrs: {placeholder: "Please Enter Email"},
                     model: {
                         value: e.userForm.email, callback: function (t) {
                             e.$set(e.userForm, "email", t)
@@ -144,11 +144,11 @@
                     }
                 })], 1), s("el-form-item", {
                     attrs: {
-                        label: "电话",
+                        label: "Phone",
                         prop: "telephone"
                     }
                 }, [s("el-input", {
-                    attrs: {placeholder: "请输入电话"},
+                    attrs: {placeholder: "Please Enter Phone number"},
                     model: {
                         value: e.userForm.telephone, callback: function (t) {
                             e.$set(e.userForm, "telephone", t)
@@ -156,11 +156,11 @@
                     }
                 })], 1), s("el-form-item", {
                     attrs: {
-                        label: "地址",
+                        label: "Address",
                         prop: "address"
                     }
                 }, [s("el-input", {
-                    attrs: {placeholder: "请输入地址"},
+                    attrs: {placeholder: ""},
                     model: {
                         value: e.userForm.address, callback: function (t) {
                             e.$set(e.userForm, "address", t)
@@ -168,7 +168,7 @@
                     }
                 })], 1), s("el-form-item", {
                     attrs: {
-                        label: "头像",
+                        label: "Avatar",
                         prop: "portraitPath"
                     }
                 }, [s("el-upload", {
@@ -187,13 +187,13 @@
                     staticClass: "el-upload__tip",
                     attrs: {slot: "tip"},
                     slot: "tip"
-                }, [e._v("只能上传jpg/png文件，且不超过10MB")])])], 1)], 1), s("div", {
+                }, [e._v("Only jpg/png files can be uploaded, and no more than 10MB")])])], 1)], 1), s("div", {
                     attrs: {slot: "footer"},
                     slot: "footer"
-                }, [s("el-button", {on: {click: e.resetUserForm}}, [e._v("重 置")]), s("el-button", {
+                }, [s("el-button", {on: {click: e.resetUserForm}}, [e._v("Reset")]), s("el-button", {
                     attrs: {type: "primary"},
                     on: {click: e.confirmUser}
-                }, [e._v("确 定")])], 1)], 1)], 1)
+                }, [e._v("Confirm")])], 1)], 1)], 1)
             }, r = [], l = (s("c975"), s("ac1f"), s("5319"), s("ade3")), i = (s("96cf"), s("1da1")), o = s("5530"),
             n = s("2f62"), u = {
                 name: "Personal", data: function () {
@@ -203,27 +203,27 @@
                         activeName: "account",
                         form: {oldPwd: null, newPwd: null, newPwd2: null},
                         rules: {
-                            oldPwd: [{required: !0, message: "必须指定原密码"}],
-                            newPwd: [{required: !0, message: "必须指定新密码"}, {validator: this.validateNewPwd}],
-                            newPwd2: [{required: !0, message: "必须指定确认密码"}, {validator: this.validateNewPwd2}]
+                            oldPwd: [{required: !0, message: "The original password must be specified"}],
+                            newPwd: [{required: !0, message: "A new password must be specified"}, {validator: this.validateNewPwd}],
+                            newPwd2: [{required: !0, message: "A confirmation password must be specified"}, {validator: this.validateNewPwd2}]
                         },
                         userForm: {},
                         userRules: {
-                            name: [{required: !0, message: "必须输入管理员姓名"}, {
+                            name: [{required: !0, message: "Administrator name is required"}, {
                                 min: 2,
-                                message: "管理员姓名不能小于2位"
+                                message: "Administrator name cannot be less than 2 characters"
                             }],
-                            gender: [{required: !0, message: "必须选择性别"}],
-                            email: [{required: !0, message: "必须输入管理员邮箱"}, {
+                            gender: [{required: !0, message: "Gender must be selected"}],
+                            email: [{required: !0, message: "Must enter administrator email"}, {
                                 type: "email",
-                                message: "不是合法的邮箱格式"
+                                message: "Not a valid email format"
                             }],
-                            telephone: [{required: !0, message: "必须输入管理员电话"}, {
+                            telephone: [{required: !0, message: "Admin phone must be entered"}, {
                                 pattern: /^[1]([3-9])[0-9]{9}$/,
-                                message: "不是合法的手机号格式"
+                                message: "Not a legal phone number format"
                             }],
-                            address: [{required: !0, message: "必须输入管理员地址"}],
-                            portraitPath: [{required: !0, message: "必须上传头像"}]
+                            address: [{required: !0, message: "Administrator address must be entered"}],
+                            portraitPath: [{required: !0, message: "Avatar must be uploaded"}]
                         }
                     }
                 }, computed: Object(o["a"])({}, Object(n["b"])(["userInfo"])), methods: {
@@ -244,7 +244,7 @@
                                                 2: "student"
                                             }, "2", "teacher"), r = a[e.userInfo.userType], t.next = 6, e.$API[r].save(e.userForm);
                                         case 6:
-                                            e.dialogVisible = !1, e.$message.success("更新用户信息成功"), e.$store.dispatch("user/resetUser"), e.$router.replace("/login");
+                                            e.dialogVisible = !1, e.$message.success("Update user information successfully"), e.$store.dispatch("user/resetUser"), e.$router.replace("/login");
                                         case 10:
                                         case"end":
                                             return t.stop()
@@ -267,9 +267,9 @@
                     }, showUserUpdate: function () {
                         this.userForm = Object(o["a"])({}, this.userInfo), this.userDialogVisible = !0
                     }, validateNewPwd: function (e, t, s) {
-                        t === this.form.oldPwd ? s("新密码不能与原密码相同") : s()
+                        t === this.form.oldPwd ? s("The new password cannot be the same as the original password") : s()
                     }, validateNewPwd2: function (e, t, s) {
-                        t != this.form.newPwd ? s("确认密码必须与密码相同") : s()
+                        t != this.form.newPwd ? s("Confirm password must be the same as password") : s()
                     }, reset: function () {
                         this.form = {oldPwd: null, newPwd: null, newPwd2: null}
                     }, showPwdUpdate: function () {
@@ -288,7 +288,7 @@
                                             }
                                             return a = e.form, r = a.oldPwd, l = a.newPwd, t.next = 4, e.$API.login.updatePwd(r, l);
                                         case 4:
-                                            e.dialogVisible = !1, e.$message.success("修改密码成功, 请重新登陆"), e.$store.dispatch("user/resetUser"), e.$router.replace("/login");
+                                            e.dialogVisible = !1, e.$message.success("Password changed successfully, please log in again"), e.$store.dispatch("user/resetUser"), e.$router.replace("/login");
                                         case 8:
                                         case"end":
                                             return t.stop()
@@ -303,7 +303,7 @@
                         this.userForm.portraitPath = e.data, this.$refs.userForm.validateField("portraitPath")
                     }, beforeAvatarUpload: function (e) {
                         var t = ["image/jpeg", "image/png"].indexOf(e.type) >= 0, s = e.size / 1024 / 1024 < 10;
-                        return t || this.$message.error("上传头像图片只能是 JPG/PNG 格式!"), s || this.$message.error("上传头像图片大小不能超过 10MB!"), t && s
+                        return t || this.$message.error("The uploaded avatar picture can only be in JPG/PNG format!"), s || this.$message.error("The size of the uploaded avatar picture cannot exceed 10MB!"), t && s
                     }
                 }
             }, d = u, c = (s("79cb"), s("2877")), m = Object(c["a"])(d, a, r, !1, null, null, null);

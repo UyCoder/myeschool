@@ -11,6 +11,7 @@ import dev.ahmed.myeschool.myeschool.service.TeacherService;
 import dev.ahmed.myeschool.myeschool.util.CreateVerifiCodeImage;
 import dev.ahmed.myeschool.myeschool.util.JwtHelper;
 import dev.ahmed.myeschool.myeschool.util.Result;
+import dev.ahmed.myeschool.myeschool.util.ResultCodeEnum;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,19 +42,54 @@ public class SystemController {
     private TeacherService teacherService;
 
 
+    @ApiOperation("The method of obtaining the currently logged-in user information through the token password")
+    @GetMapping("/getInfo")
+    public Result getInfoByToken(
+            @ApiParam("token password") @RequestHeader("token") String token) {
+        boolean expiration = JwtHelper.isExpiration(token);
+        if (expiration) {
+            return Result.build(null, ResultCodeEnum.TOKEN_ERROR);
+        }
+        //get the user id and user type from the token
+        Long userId = JwtHelper.getUserId(token);
+        Integer userType = JwtHelper.getUserType(token);
+
+
+        Map<String, Object> map = new LinkedHashMap<>();
+        switch (userType) {
+            case 1:
+                Admin admin = adminService.getAdminById(userId);
+                map.put("userType", 1);
+                map.put("user", admin);
+                break;
+            case 2:
+                Student student = studentService.getStudentById(userId);
+                map.put("userType", 2);
+                map.put("user", student);
+                break;
+            case 3:
+                Teacher teacher = teacherService.getTeacherById(userId);
+                map.put("userType", 3);
+                map.put("user", teacher);
+                break;
+        }
+        return Result.ok(map);
+    }
+
+
     @ApiOperation("Login")
     @PostMapping("/login")
     public Result login(
-            @ApiParam("Login form to submit information")@RequestBody LoginForm loginForm,
-            HttpServletRequest request){
+            @ApiParam("Login form to submit information") @RequestBody LoginForm loginForm,
+            HttpServletRequest request) {
         // Verificode verification
         HttpSession session = request.getSession();
-        String sessionVerifiCode = (String)session.getAttribute("verifiCode");
+        String sessionVerifiCode = (String) session.getAttribute("verifiCode");
         String loginVerifiCode = loginForm.getVerifiCode();
-        if("".equals(sessionVerifiCode) || null == sessionVerifiCode){
+        if ("".equals(sessionVerifiCode) || null == sessionVerifiCode) {
             return Result.fail().message("The verification code is invalid, please refresh and try again");
         }
-        if (!sessionVerifiCode.equalsIgnoreCase(loginVerifiCode)){
+        if (!sessionVerifiCode.equalsIgnoreCase(loginVerifiCode)) {
             return Result.fail().message("The verification code is incorrect, please enter it carefully and try again");
         }
         //Remove existing captchas from the session field
@@ -62,15 +98,15 @@ public class SystemController {
 
         // Check by user type
         // Prepare a map user to store the response data
-        Map<String,Object> map=new LinkedHashMap<>();
-        switch (loginForm.getUserType()){
+        Map<String, Object> map = new LinkedHashMap<>();
+        switch (loginForm.getUserType()) {
             case 1:
                 try {
-                    Admin admin=adminService.login(loginForm);
+                    Admin admin = adminService.login(loginForm);
                     if (null != admin) {
                         // The user type and user id are converted into a ciphertext, which is fed back to the client in the name of token
                         map.put("token", JwtHelper.createToken(admin.getId().longValue(), 1));
-                    }else{
+                    } else {
                         throw new RuntimeException("Username or password is wrong");
                     }
                     return Result.ok(map);
@@ -80,11 +116,11 @@ public class SystemController {
                 }
             case 2:
                 try {
-                    Student student =studentService.login(loginForm);
+                    Student student = studentService.login(loginForm);
                     if (null != student) {
                         // The user type and user id are converted into a ciphertext, which is fed back to the client in the name of token
-                        map.put("token",JwtHelper.createToken(student.getId().longValue(), 2));
-                    }else{
+                        map.put("token", JwtHelper.createToken(student.getId().longValue(), 2));
+                    } else {
                         throw new RuntimeException("Username or password is wrong");
                     }
                     return Result.ok(map);
@@ -94,11 +130,11 @@ public class SystemController {
                 }
             case 3:
                 try {
-                    Teacher teacher =teacherService.login(loginForm);
+                    Teacher teacher = teacherService.login(loginForm);
                     if (null != teacher) {
                         // The user type and user id are converted into a ciphertext, which is fed back to the client in the name of token
-                        map.put("token",JwtHelper.createToken(teacher.getId().longValue(), 3));
-                    }else{
+                        map.put("token", JwtHelper.createToken(teacher.getId().longValue(), 3));
+                    } else {
                         throw new RuntimeException("Username or password is wrong");
                     }
                     return Result.ok(map);

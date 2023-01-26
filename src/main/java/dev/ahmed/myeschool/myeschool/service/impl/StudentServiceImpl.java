@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import dev.ahmed.myeschool.myeschool.mapper.ClazzMapper;
 import dev.ahmed.myeschool.myeschool.mapper.StudentMapper;
+import dev.ahmed.myeschool.myeschool.pojo.Admin;
 import dev.ahmed.myeschool.myeschool.pojo.Clazz;
 import dev.ahmed.myeschool.myeschool.pojo.LoginForm;
 import dev.ahmed.myeschool.myeschool.pojo.Student;
@@ -29,5 +30,12 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
 
         Student student = baseMapper.selectOne(queryWrapper);
         return student;
+    }
+
+    @Override
+    public Student getStudentById(Long userId) {
+        QueryWrapper<Student> queryWrapper = new QueryWrapper<Student>();
+        queryWrapper.eq("id", userId);
+        return baseMapper.selectOne(queryWrapper);
     }
 }
