@@ -59,7 +59,8 @@ public class Swagger2Config {
                 .apiInfo(webApiInfo())
                 .select()
                 //You can test the request header: enter token
-                .apis(RequestHandlerSelectors.withClassAnnotation(ApiOperation.class))
+//                .apis(RequestHandlerSelectors.withClassAnnotation(ApiOperation.class))
+                .apis(RequestHandlerSelectors.basePackage("dev.ahmed.myeschool.myeschool.controller"))
                 //Filter out all pages under the admin path
                 //.paths(Predicates.and(PathSelectors.regex("/sms/.*")))
                 //Filter out all error or error.* pages
