@@ -1,7 +1,7 @@
 # E-School Management System
 
 ## 📖 Overview
-This project is an online school management system that allows administrators, teachers, students, and parents to manage and access information related to the school. The project includes modules for managing grades, classes, teachers, students, and personal information. It also includes a login and authentication system for controlling access to the different modules.
+This project is an online school management system that allows administrators, teachers and students to manage and access information related to the school. The project includes modules for managing grades, classes, teachers, students, and personal information. It also includes a login and authentication system for controlling access to the different modules.
 
 ## 🚀 Features
 - Student information management
@@ -71,17 +71,19 @@ This project is an online school management system that allows administrators, t
 - HTML, CSS, and JavaScript for front-end development
 - Vue.js as the JavaScript framework
 - JSON for data transfer
--  Java and Spring Boot for back-end development
--   MySQL as the database management system
--   JDBC for database connectivity
--   Swagger for API documentation
--   Mybatis Plus for database access
--   Maven for project management and dependency management
--   Git for version control
--   Tomcat as the application server
--   IntelliJ IDEA as the development environment
--   Postman for API testing
--   Chrome as the web browser
+- Java for back-end development
+- Spring for back-end application
+- JWT for Security Authentication
+- MySQL as the database management system
+- JDBC for database connectivity
+- Swagger for API documentation
+- Mybatis Plus for database access
+- Maven for project management and dependency management
+- Git for version control
+- Tomcat as the application server
+- IntelliJ IDEA as the development environment
+- Postman for API testing
+- Chrome as the web browser
 
 
 ## Project Structure
