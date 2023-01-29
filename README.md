@@ -26,6 +26,10 @@ This project is an online school management system that allows administrators, t
 - Personal information management module
 - Access control
 
+## Datebase Structure
+![database](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/Database.png)
+
+
 ### Screenshots of the user interface:
 ![01](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/01.png)
 
@@ -94,8 +98,6 @@ This project is an online school management system that allows administrators, t
 - Postman for API testing
 - Chrome as the web browser
 
-## Datebase Structure
-![database](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/Database.png)
 
 ## Project Structure
 The project is structured as follows:
