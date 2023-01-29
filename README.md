@@ -67,6 +67,14 @@ This project is an online school management system that allows administrators, t
 - `Challenge 4`: Data security issues. 
   - `Solution`: Implementing MD5 encryption for passwords and performing password verification in ciphertext form.
 
+
+## 🛠 Built With
+- Spring Boot - The web framework used
+- Mybatis Plus - ORM framework
+- Vue.js - JavaScript framework
+- Maven - Dependency Management
+
+
 ## 🔧 Technologies and Tools Used
 - HTML, CSS, and JavaScript for front-end development
 - Vue.js as the JavaScript framework
@@ -175,37 +183,21 @@ myeschool
 
 ## Dependencies
 1. `spring-boot-starter`: This is a basic dependency for Spring Boot application development. It includes a set of commonly used libraries for building web applications.
-
 2. `spring-boot-starter-web`: This dependency includes libraries for building web applications, such as Spring MVC, tomcat, and spring web.
-
 3. `spring-boot-starter-test`: This dependency includes libraries for testing Spring Boot applications, such as JUnit, Hamcrest, and Mockito.
-
 4. `spring-boot-starter-thymeleaf`: This dependency includes the Thymeleaf template engine for building web pages in a Spring Boot application.
-
 5. `mybatis-plus-boot-starter`: This dependency includes the Mybatis Plus library for working with databases in a Spring Boot application.
-
 6. `lombok`: This dependency includes the Lombok library, which provides additional functionality for writing Java code, such as automatic getters and setters.
-
 7. `mysql-connector-java`: This dependency includes the MySQL Connector/J library, which allows a Spring Boot application to connect to a MySQL database.
-
 8. `mybatis-plus-generator`: This dependency includes the Mybatis Plus Generator library, which can automatically generate code for working with databases in a Spring Boot application.
-
 9. `freemarker`: This dependency includes the FreeMarker template engine, which can be used to build web pages in a Spring Boot application.
-
 10. `springfox-swagger2`: This dependency includes the Springfox library for generating API documentation in Swagger format.
-
 11. `springfox-swagger-ui`: This dependency includes the Springfox library for displaying API documentation in a web UI.
-
 12. `knife4j-spring-boot-starter`: This dependency includes a set of libraries for building web applications with knife4j
-
 13. `spring-boot-devtools`: This dependency includes libraries that improve the development experience, such as automatic reloading of changes.
-
 14. `fastjson`: This dependency includes the Fastjson library, which is a JSON processing library that can be used in a Spring Boot application.
-
 15. `jjwt`: This dependency includes the JJWT library, which provides functionality for creating and validating JSON Web Tokens.
-
 16. `commons-fileupload`: This dependency includes the Apache Commons FileUpload library, which can be used to handle file uploads in a Spring Boot application.
-
 17. `postgresql`: This dependency includes the PostgreSQL JDBC driver, which allows a Spring Boot application to connect to a PostgreSQL database.
 
 ## pom.xml file
@@ -341,16 +333,10 @@ git clone https://github.com/UyCoder/myeschool.git
 mvn clean install
 ```
 5. Deploy the project to Tomcat
-## 🛠 Built With
-- Spring Boot - The web framework used
-- Mybatis Plus - ORM framework
-- Vue.js - JavaScript framework
-- Maven - Dependency Management
+
 ## 🤝 Contributing
 Please read ```CONTRIBUTING.md``` for details on our code of conduct, and the process for submitting pull requests to us.
 
-## 📈 Versioning
-We use ```SemVer``` for versioning. For the versions available, see the tags on this repository.
 
 ## 👨‍💻 Contact me
 Author: [Ahmed Bughra](https://www.linkedin.com/in/ahmed-bughra/)
