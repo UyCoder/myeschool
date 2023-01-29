@@ -74,6 +74,7 @@ This project is an online school management system that allows administrators, t
 - Java for back-end development
 - Spring for back-end application
 - JWT for Security Authentication
+- MD5 for Encryption
 - MySQL as the database management system
 - JDBC for database connectivity
 - Swagger for API documentation
@@ -172,6 +173,155 @@ myeschool
 
 </details>
 
+## Dependencies
+1. `spring-boot-starter`: This is a basic dependency for Spring Boot application development. It includes a set of commonly used libraries for building web applications.
+
+2. `spring-boot-starter-web`: This dependency includes libraries for building web applications, such as Spring MVC, tomcat, and spring web.
+
+3. `spring-boot-starter-test`: This dependency includes libraries for testing Spring Boot applications, such as JUnit, Hamcrest, and Mockito.
+
+4. `spring-boot-starter-thymeleaf`: This dependency includes the Thymeleaf template engine for building web pages in a Spring Boot application.
+
+5. `mybatis-plus-boot-starter`: This dependency includes the Mybatis Plus library for working with databases in a Spring Boot application.
+
+6. `lombok`: This dependency includes the Lombok library, which provides additional functionality for writing Java code, such as automatic getters and setters.
+
+7. `mysql-connector-java`: This dependency includes the MySQL Connector/J library, which allows a Spring Boot application to connect to a MySQL database.
+
+8. `mybatis-plus-generator`: This dependency includes the Mybatis Plus Generator library, which can automatically generate code for working with databases in a Spring Boot application.
+
+9. `freemarker`: This dependency includes the FreeMarker template engine, which can be used to build web pages in a Spring Boot application.
+
+10. `springfox-swagger2`: This dependency includes the Springfox library for generating API documentation in Swagger format.
+
+11. `springfox-swagger-ui`: This dependency includes the Springfox library for displaying API documentation in a web UI.
+
+12. `knife4j-spring-boot-starter`: This dependency includes a set of libraries for building web applications with knife4j
+
+13. `spring-boot-devtools`: This dependency includes libraries that improve the development experience, such as automatic reloading of changes.
+
+14. `fastjson`: This dependency includes the Fastjson library, which is a JSON processing library that can be used in a Spring Boot application.
+
+15. `jjwt`: This dependency includes the JJWT library, which provides functionality for creating and validating JSON Web Tokens.
+
+16. `commons-fileupload`: This dependency includes the Apache Commons FileUpload library, which can be used to handle file uploads in a Spring Boot application.
+
+17. `postgresql`: This dependency includes the PostgreSQL JDBC driver, which allows a Spring Boot application to connect to a PostgreSQL database.
+
+
+<details> 
+ <summary><strong>Show more</strong></summary>
+
+```shell
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- thymeleaf -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!--  mybatis-plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+
+        <!--  POJO  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.31</version>
+        </dependency>
+
+        <!--swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <!--swagger ui-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <!--swagger2  -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>2.0.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.29</version>
+        </dependency>
+
+        <!-- JWT Token-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.lucee</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>8.3-606.jdbc4</version>
+        </dependency>
+    </dependencies>
+
+```
+
+</details>
 
 ### Usage
 - Clone the repository
