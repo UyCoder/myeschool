@@ -29,6 +29,7 @@ This project is an online school management system that allows administrators, t
 ## Datebase Structure
 ![database](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/Database.png)
 
+- The DML and database informations could be found in `myeschool/src/main/resources/sql/Script.sql` file.
 
 ### Screenshots of the user interface:
 ![01](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/01.png)
