@@ -1,6 +1,6 @@
 # E-School Management System
 
-## Overview
+## 📖 Overview
 This project is an online school management system that allows administrators, teachers, students, and parents to manage and access information related to the school. The project includes modules for managing grades, classes, teachers, students, and personal information. It also includes a login and authentication system for controlling access to the different modules.
 
 ## 🚀 Features
@@ -14,7 +14,7 @@ This project is an online school management system that allows administrators, t
 - Communication tools for teachers, parents, and students
 - Reporting and analytics
 
-## Requirements
+## 🛠 Requirements
 - Functionality requirement analysis
 - Database design
 - Login control
@@ -66,9 +66,6 @@ This project is an online school management system that allows administrators, t
 
 - `Challenge 4`: Data security issues. 
   - `Solution`: Implementing MD5 encryption for passwords and performing password verification in ciphertext form.
-
-## 📖 Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## 🔧 Technologies and Tools Used
 - HTML, CSS, and JavaScript for front-end development
