@@ -27,20 +27,30 @@ This project is an online school management system that allows administrators, t
 - Access control
 
 ### Screenshots of the user interface:
+![01](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/01.png)
 
 <details>
 <summary><strong>Show more</strong></summary>
 
-![01](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/01.png)
-
+![02](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/02.png)
+![03](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/03.png)
+![04](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/04.png)
+![05](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/05.png)
+![06](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/06.png)
+![07](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/07.png)
+![08](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/08.png)
+![09](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/09.png)
+![10](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/10.png)
+ 
 </details>
 
 ### Screenshots for swagger file
-
+![11](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/swagger1.png)
 <details> 
  <summary><strong>Show more</strong></summary> 
 
-![08](https://user-images.githubusercontent.com/50663127/160109272-9a1d3c56-af65-4edb-8cc2-1790a10f013f.PNG)
+![11](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/swagger1.png)
+![12](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/swagger2.png)
 
 </details>
 
