@@ -1,6 +1,9 @@
 package dev.ahmed.myeschool.myeschool.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import dev.ahmed.myeschool.myeschool.mapper.AdminMapper;
 import dev.ahmed.myeschool.myeschool.pojo.Admin;
@@ -33,5 +36,18 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         QueryWrapper<Admin> queryWrapper = new QueryWrapper<Admin>();
         queryWrapper.eq("id", userId);
         return baseMapper.selectOne(queryWrapper);
+    }
+
+    @Override
+    public IPage<Admin> getAdminsByOpr(Page<Admin> pageParam, String adminName) {
+        QueryWrapper<Admin> queryWrapper=new QueryWrapper<>();
+        if (!StringUtils.isEmpty(adminName)) {
+            queryWrapper.like("name",adminName);
+        }
+        queryWrapper.orderByDesc("id");
+
+        Page<Admin> page = baseMapper.selectPage(pageParam, queryWrapper);
+
+        return page;
     }
 }

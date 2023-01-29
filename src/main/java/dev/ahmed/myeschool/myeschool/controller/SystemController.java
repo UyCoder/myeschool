@@ -80,7 +80,8 @@ public class SystemController {
     @ApiOperation("Login")
     @PostMapping("/login")
     public Result login(
-            @ApiParam("Login form to submit information") @RequestBody LoginForm loginForm,
+            @ApiParam("Login form to submit information")
+            @RequestBody LoginForm loginForm,
             HttpServletRequest request) {
         // Verificode verification
         HttpSession session = request.getSession();

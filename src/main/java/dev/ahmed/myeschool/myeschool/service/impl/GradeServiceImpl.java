@@ -14,22 +14,33 @@ import dev.ahmed.myeschool.myeschool.service.GradeService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * @author Ahmed Bughra
  * @create 2023-01-25  7:21 PM
  */
-@Service("gradeServiceImpl")
+
+@Service
 @Transactional
 public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements GradeService {
+
+
     @Override
     public IPage<Grade> getGradeByOpr(Page<Grade> pageParam, String gradeName) {
-        QueryWrapper<Grade> queryWrapper = new QueryWrapper();
+
+        QueryWrapper<Grade> queryWrapper=new QueryWrapper();
 
         if (!StringUtils.isEmpty(gradeName)) {
-            queryWrapper.like("name", gradeName);
+            queryWrapper.like("name",gradeName);
         }
         queryWrapper.orderByDesc("id");
         Page<Grade> page = baseMapper.selectPage(pageParam, queryWrapper);
         return page;
+    }
+
+    @Override
+    public List<Grade> getGrades() {
+        return  baseMapper.selectList(null);
     }
 }
