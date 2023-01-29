@@ -31,7 +31,7 @@ This project is an online school management system that allows administrators, t
 <details>
 <summary><strong>Show more</strong></summary>
 
-![02](https://user-images.githubusercontent.com/50663127/160109171-202eda6d-4102-4a77-9f27-b330af5a24f4.PNG)
+![01](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/01.png)
 
 </details>
 
