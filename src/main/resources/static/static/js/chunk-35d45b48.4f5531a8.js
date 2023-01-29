@@ -14,8 +14,8 @@
             }, [a("el-form-item", [a("el-button", {
                 attrs: {type: "primary", icon: "el-icon-plus", size: "small"},
                 on: {click: e.showAdd}
-            }, [e._v("添加")]), a("el-popconfirm", {
-                attrs: {title: "确定删除吗?"},
+            }, [e._v("Add")]), a("el-popconfirm", {
+                attrs: {title: "Want to Delete?"},
                 on: {onConfirm: e.removeBatch}
             }, [a("el-button", {
                 staticStyle: {"margin-left": "10px"},
@@ -27,9 +27,9 @@
                     size: "small"
                 },
                 slot: "reference"
-            }, [e._v("批量删除")])], 1)], 1), a("el-form-item", {attrs: {label: "管理员姓名:"}}, [a("el-input", {
+            }, [e._v("Bulk Delete")])], 1)], 1), a("el-form-item", {attrs: {label: "Admin Name:"}}, [a("el-input", {
                 attrs: {
-                    placeholder: "请输入管理员姓名",
+                    placeholder: "Insert Admin name",
                     size: "small"
                 }, model: {
                     value: e.searchParams.adminName, callback: function (t) {
@@ -39,10 +39,10 @@
             })], 1), a("el-form-item", [a("el-button", {
                 attrs: {type: "primary", icon: "el-icon-search", size: "small"},
                 on: {click: e.search}
-            }, [e._v("搜索")]), a("el-button", {
+            }, [e._v("Search")]), a("el-button", {
                 attrs: {type: "info", icon: "el-icon-brush", size: "small"},
                 on: {click: e.resetParams}
-            }, [e._v("重置")])], 1)], 1), a("el-table", {
+            }, [e._v("Reset")])], 1)], 1), a("el-table", {
                 directives: [{
                     name: "loading",
                     rawName: "v-loading",
@@ -67,36 +67,36 @@
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "姓名",
+                    label: "Name",
                     prop: "name",
                     width: "100"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "性别",
+                    label: "Gender",
                     prop: "gender",
                     width: "100"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "邮箱",
+                    label: "Email",
                     width: "150",
                     prop: "email"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "电话",
+                    label: "Phone",
                     width: "120",
                     prop: "telephone"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "地址",
+                    label: "Address",
                     width: "120",
                     prop: "address"
                 }
             }), a("el-table-column", {
-                attrs: {label: "头像", width: "100"},
+                attrs: {label: "Avatar", width: "100"},
                 scopedSlots: e._u([{
                     key: "default", fn: function (e) {
                         var t = e.row;
@@ -107,7 +107,7 @@
                     }
                 }])
             }), a("el-table-column", {
-                attrs: {label: "操作", width: "150", align: "left", fixed: "right"},
+                attrs: {label: "Action", width: "150", align: "left", fixed: "right"},
                 scopedSlots: e._u([{
                     key: "default", fn: function (t) {
                         var r = t.row;
@@ -117,8 +117,8 @@
                                     return e.showUpdate(r)
                                 }
                             }
-                        }, [e._v("修改")]), a("el-popconfirm", {
-                            attrs: {title: "确定删除 " + r.name + " 吗"},
+                        }, [e._v("Edit")]), a("el-popconfirm", {
+                            attrs: {title: "Confirm delete " + r.name + " ?"},
                             on: {
                                 onConfirm: function (t) {
                                     return e.remove(r.id)
@@ -128,7 +128,7 @@
                             staticStyle: {"margin-left": "10px"},
                             attrs: {slot: "reference", type: "danger", size: "mini"},
                             slot: "reference"
-                        }, [e._v("删除")])], 1)]
+                        }, [e._v("Delete")])], 1)]
                     }
                 }])
             })], 1), a("el-pagination", {
@@ -143,7 +143,7 @@
                 on: {"current-change": e.handleCurrentChange, "size-change": e.handleSizeChange}
             })], 1), a("el-dialog", {
                 attrs: {
-                    title: e.form.id ? "修改管理员信息" : "添加管理员信息",
+                    title: e.form.id ? "Edit Admin info" : "Add Admin info",
                     visible: e.dialogVisible,
                     width: "40%"
                 }, on: {
@@ -157,39 +157,39 @@
                 attrs: {model: e.form, rules: e.rules, "label-width": "100px"}
             }, [a("el-form-item", {
                 attrs: {
-                    label: "姓名",
+                    label: "Name",
                     prop: "name"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入姓名"}, model: {
+                attrs: {placeholder: "Insert Name"}, model: {
                     value: e.form.name, callback: function (t) {
                         e.$set(e.form, "name", t)
                     }, expression: "form.name"
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "性别",
+                    label: "Gender",
                     prop: "gender"
                 }
             }, [a("el-select", {
-                attrs: {placeholder: "请选择性别"},
+                attrs: {placeholder: "Select Gender"},
                 model: {
                     value: e.form.gender, callback: function (t) {
                         e.$set(e.form, "gender", t)
                     }, expression: "form.gender"
                 }
-            }, [a("el-option", {attrs: {label: "男", value: "男"}}), a("el-option", {
+            }, [a("el-option", {attrs: {label: "Male", value: "M"}}), a("el-option", {
                 attrs: {
-                    label: "女",
-                    value: "女"
+                    label: "Female",
+                    value: "F"
                 }
             })], 1)], 1), e.form.id ? e._e() : a("el-form-item", {
                 attrs: {
-                    label: "密码",
+                    label: "Password",
                     prop: "password"
                 }
             }, [a("el-input", {
-                attrs: {type: "password", placeholder: "请输入密码"},
+                attrs: {type: "password", placeholder: "Insert password"},
                 model: {
                     value: e.form.password, callback: function (t) {
                         e.$set(e.form, "password", t)
@@ -197,11 +197,11 @@
                 }
             })], 1), e.form.id ? e._e() : a("el-form-item", {
                 attrs: {
-                    label: "确认密码",
+                    label: "Password",
                     prop: "password2"
                 }
             }, [a("el-input", {
-                attrs: {type: "password", placeholder: "请输入确认密码"},
+                attrs: {type: "password", placeholder: "Insert password"},
                 model: {
                     value: e.form.password2, callback: function (t) {
                         e.$set(e.form, "password2", t)
@@ -209,22 +209,22 @@
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "邮箱",
+                    label: "Email",
                     prop: "email"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入邮箱"}, model: {
+                attrs: {placeholder: "Insert Email"}, model: {
                     value: e.form.email, callback: function (t) {
                         e.$set(e.form, "email", t)
                     }, expression: "form.email"
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "电话",
+                    label: "Phone",
                     prop: "telephone"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入电话"},
+                attrs: {placeholder: "Insert Phone"},
                 model: {
                     value: e.form.telephone, callback: function (t) {
                         e.$set(e.form, "telephone", t)
@@ -232,11 +232,11 @@
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "地址",
+                    label: "Address",
                     prop: "address"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入地址"},
+                attrs: {placeholder: "Insert Address"},
                 model: {
                     value: e.form.address, callback: function (t) {
                         e.$set(e.form, "address", t)
@@ -244,7 +244,7 @@
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "头像",
+                    label: "Avatar",
                     prop: "portraitPath"
                 }
             }, [a("el-upload", {
@@ -263,13 +263,13 @@
                 staticClass: "el-upload__tip",
                 attrs: {slot: "tip"},
                 slot: "tip"
-            }, [e._v("只能上传jpg/png文件，且不超过10MB")])])], 1)], 1), a("div", {
+            }, [e._v("Only jpg/png files can be uploaded, and no more than 10MB")])])], 1)], 1), a("div", {
                 attrs: {slot: "footer"},
                 slot: "footer"
-            }, [a("el-button", {on: {click: e.reset}}, [e._v("重置")]), a("el-button", {
+            }, [a("el-button", {on: {click: e.reset}}, [e._v("Reset")]), a("el-button", {
                 attrs: {type: "primary"},
                 on: {click: e.confirm}
-            }, [e._v("确 定")])], 1)], 1)], 1)
+            }, [e._v("OK")])], 1)], 1)], 1)
         }, s = [], i = (a("c975"), a("d81d"), a("96cf"), a("1da1")), o = a("5530"), n = {
             name: "AdminManage", data: function () {
                 return {
@@ -290,30 +290,30 @@
                         portraitPath: ""
                     },
                     rules: {
-                        name: [{required: !0, message: "必须输入管理员姓名"}, {
+                        name: [{required: !0, message: "Administrator name is required"}, {
                             min: 2,
-                            message: "管理员姓名不能小于2位"
+                            message: "Administrator name cannot be less than 2 characters"
                         }],
-                        gender: [{required: !0, message: "必须选择性别"}],
-                        password: [{required: !0, message: "必须输入密码"}, {min: 6, message: "密码不能小于6位"}],
-                        password2: [{required: !0, message: "必须输入确认密码"}, {validator: this.validatePwd2}],
-                        email: [{required: !0, message: "必须输入管理员邮箱"}, {
+                        gender: [{required: !0, message: "Gender must be selected"}],
+                        password: [{required: !0, message: "password is required"}, {min: 6, message: "Password cannot be less than 6 characters"}],
+                        password2: [{required: !0, message: "Must enter confirmation password"}, {validator: this.validatePwd2}],
+                        email: [{required: !0, message: "Administrator email must be entered"}, {
                             type: "email",
-                            message: "不是合法的邮箱格式"
+                            message: "Not a valid email format"
                         }],
-                        telephone: [{required: !0, message: "必须输入管理员电话"}, {
+                        telephone: [{required: !0, message: "Admin phone must be entered"}, {
                             pattern: /^[1]([3-9])[0-9]{9}$/,
-                            message: "不是合法的手机号格式"
+                            message: "Not a legal phone number format"
                         }],
-                        address: [{required: !0, message: "必须输入管理员地址"}],
-                        portraitPath: [{required: !0, message: "必须上传头像"}]
+                        address: [{required: !0, message: "Administrator address must be entered"}],
+                        portraitPath: [{required: !0, message: "Avatar must be uploaded"}]
                     }
                 }
             }, mounted: function () {
                 this.getList()
             }, methods: {
                 validatePwd2: function (e, t, a) {
-                    t != this.form.password ? a("确认密码必须与密码相同") : a()
+                    t != this.form.password ? a("Confirm password must be the same as password") : a()
                 }, resetParams: function () {
                     this.searchParams = {pageNo: 1, pageSize: 3, adminName: null}, this.getList()
                 }, showAdd: function () {
@@ -340,7 +340,7 @@
                                 case 0:
                                     return a.next = 2, t.$API.admin.removeBatch([e]);
                                 case 2:
-                                    t.$message.success("删除成功"), 1 === t.list.length && t.searchParams.pageNo > 1 && t.searchParams.pageNo--, t.getList();
+                                    t.$message.success("successfully deleted"), 1 === t.list.length && t.searchParams.pageNo > 1 && t.searchParams.pageNo--, t.getList();
                                 case 5:
                                 case"end":
                                     return a.stop()
@@ -358,7 +358,7 @@
                                         return e.id
                                     })), t.next = 3, e.$API.admin.removeBatch(a);
                                 case 3:
-                                    e.$message.success("删除成功"), e.list.length === e.selectedList.length && e.searchParams.pageNo > 1 && e.searchParams.pageNo--, e.getList();
+                                    e.$message.success("successfully deleted"), e.list.length === e.selectedList.length && e.searchParams.pageNo > 1 && e.searchParams.pageNo--, e.getList();
                                 case 6:
                                 case"end":
                                     return t.stop()
@@ -390,7 +390,7 @@
                                         }
                                         return t.next = 3, e.$API.admin.save(e.form);
                                     case 3:
-                                        r = !!e.form.id, e.dialogVisible = !1, e.$message.success("".concat(r ? "更新" : "添加", "成功")), r || (e.searchParams.pageNo = 1), e.getList();
+                                        r = !!e.form.id, e.dialogVisible = !1, e.$message.success("".concat(r ? "Edit" : "Add", "success")), r || (e.searchParams.pageNo = 1), e.getList();
                                     case 8:
                                     case"end":
                                         return t.stop()
@@ -427,7 +427,7 @@
                     this.form.portraitPath = e.data, this.$refs.ruleForm.validateField("portraitPath")
                 }, beforeAvatarUpload: function (e) {
                     var t = ["image/jpeg", "image/png"].indexOf(e.type) >= 0, a = e.size / 1024 / 1024 < 10;
-                    return t || this.$message.error("上传头像图片只能是 JPG/PNG 格式!"), a || this.$message.error("上传头像图片大小不能超过 10MB!"), t && a
+                    return t || this.$message.error("The uploaded avatar picture can only be in JPG/PNG format!"), a || this.$message.error("The size of the uploaded avatar picture cannot exceed 10MB!"), t && a
                 }
             }
         }, l = n, c = (a("e6ac"), a("2877")), m = Object(c["a"])(l, r, s, !1, null, "849454b8", null);

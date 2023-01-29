@@ -8,7 +8,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import dev.ahmed.myeschool.myeschool.mapper.AdminMapper;
 import dev.ahmed.myeschool.myeschool.pojo.Admin;
 import dev.ahmed.myeschool.myeschool.pojo.LoginForm;
-import dev.ahmed.myeschool.myeschool.pojo.Teacher;
 import dev.ahmed.myeschool.myeschool.service.AdminService;
 import dev.ahmed.myeschool.myeschool.util.MD5;
 import org.springframework.stereotype.Service;

@@ -14,8 +14,8 @@
             }, [a("el-form-item", [a("el-button", {
                 attrs: {type: "primary", icon: "el-icon-plus", size: "small"},
                 on: {click: e.showAdd}
-            }, [e._v("添加")]), a("el-popconfirm", {
-                attrs: {title: "确定删除吗?"},
+            }, [e._v("Add")]), a("el-popconfirm", {
+                attrs: {title: "Confirm delete?"},
                 on: {onConfirm: e.removeBatch}
             }, [a("el-button", {
                 staticStyle: {"margin-left": "10px"},
@@ -27,9 +27,9 @@
                     size: "small"
                 },
                 slot: "reference"
-            }, [e._v("批量删除")])], 1)], 1), a("el-form-item", {attrs: {label: "年级名称:"}}, [a("el-input", {
+            }, [e._v("Bulk delete")])], 1)], 1), a("el-form-item", {attrs: {label: "Grade name:"}}, [a("el-input", {
                 attrs: {
-                    placeholder: "请输入年级名称",
+                    placeholder: "Please enter grade name",
                     size: "small"
                 }, model: {
                     value: e.searchParams.gradeName, callback: function (t) {
@@ -39,10 +39,10 @@
             })], 1), a("el-form-item", [a("el-button", {
                 attrs: {type: "primary", icon: "el-icon-search", size: "small"},
                 on: {click: e.search}
-            }, [e._v("搜索")]), a("el-button", {
+            }, [e._v("Search")]), a("el-button", {
                 attrs: {type: "info", icon: "el-icon-brush", size: "small"},
                 on: {click: e.resetParams}
-            }, [e._v("重置")])], 1)], 1), a("el-table", {
+            }, [e._v("Reset")])], 1)], 1), a("el-table", {
                 directives: [{
                     name: "loading",
                     rawName: "v-loading",
@@ -67,36 +67,36 @@
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "年级名称",
+                    label: "Grade",
                     prop: "name",
                     "min-width": "100"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "年级主任",
+                    label: "Manager",
                     prop: "manager",
                     "min-width": "100"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "邮箱",
+                    label: "Email",
                     "min-width": "150",
                     prop: "email"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "电话",
+                    label: "Phone",
                     "min-width": "120",
                     prop: "telephone"
                 }
             }), a("el-table-column", {
                 attrs: {
-                    label: "年级介绍",
+                    label: "Desc",
                     "min-width": "200",
                     prop: "introducation"
                 }
             }), a("el-table-column", {
-                attrs: {label: "操作", "min-width": "150", align: "left", fixed: "right"},
+                attrs: {label: "Action", "min-width": "150", align: "left", fixed: "right"},
                 scopedSlots: e._u([{
                     key: "default", fn: function (t) {
                         var r = t.row;
@@ -106,8 +106,8 @@
                                     return e.showUpdate(r)
                                 }
                             }
-                        }, [e._v("修改")]), a("el-popconfirm", {
-                            attrs: {title: "确定删除 " + r.name + " 吗"},
+                        }, [e._v("Edit")]), a("el-popconfirm", {
+                            attrs: {title: "Delete " + r.name + " ?"},
                             on: {
                                 onConfirm: function (t) {
                                     return e.remove(r.id)
@@ -117,7 +117,7 @@
                             staticStyle: {"margin-left": "10px"},
                             attrs: {slot: "reference", type: "danger", size: "mini"},
                             slot: "reference"
-                        }, [e._v("删除")])], 1)]
+                        }, [e._v("Delete")])], 1)]
                     }
                 }])
             })], 1), a("el-pagination", {
@@ -132,7 +132,7 @@
                 on: {"current-change": e.handleCurrentChange, "size-change": e.handleSizeChange}
             })], 1), a("el-dialog", {
                 attrs: {
-                    title: e.form.id ? "修改年级信息" : "添加年级信息",
+                    title: e.form.id ? "Modify grade information" : "Add grade information",
                     visible: e.dialogVisible,
                     width: "40%"
                 }, on: {
@@ -146,11 +146,11 @@
                 attrs: {model: e.form, rules: e.rules, "label-width": "100px"}
             }, [a("el-form-item", {
                 attrs: {
-                    label: "年级名称",
+                    label: "Grade",
                     prop: "name"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入年级名称"},
+                attrs: {placeholder: "Please enter grade name"},
                 model: {
                     value: e.form.name, callback: function (t) {
                         e.$set(e.form, "name", t)
@@ -158,11 +158,11 @@
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "年级主任",
+                    label: "Manager",
                     prop: "manager"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入年级主任"},
+                attrs: {placeholder: "Insert Manager Name"},
                 model: {
                     value: e.form.manager, callback: function (t) {
                         e.$set(e.form, "manager", t)
@@ -170,11 +170,11 @@
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "主任邮箱",
+                    label: "Email",
                     prop: "email"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入主任邮箱"},
+                attrs: {placeholder: "Insert email"},
                 model: {
                     value: e.form.email, callback: function (t) {
                         e.$set(e.form, "email", t)
@@ -182,11 +182,11 @@
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "主任电话",
+                    label: "Phone",
                     prop: "telephone"
                 }
             }, [a("el-input", {
-                attrs: {placeholder: "请输入主任电话"},
+                attrs: {placeholder: "Insert phone"},
                 model: {
                     value: e.form.telephone, callback: function (t) {
                         e.$set(e.form, "telephone", t)
@@ -194,11 +194,11 @@
                 }
             })], 1), a("el-form-item", {
                 attrs: {
-                    label: "年级介绍",
+                    label: "Desc",
                     prop: "introducation"
                 }
             }, [a("el-input", {
-                attrs: {type: "textarea", placeholder: "请输入年级介绍"},
+                attrs: {type: "textarea", placeholder: "Insert Introduction"},
                 model: {
                     value: e.form.introducation, callback: function (t) {
                         e.$set(e.form, "introducation", t)
@@ -207,10 +207,10 @@
             })], 1)], 1), a("div", {
                 attrs: {slot: "footer"},
                 slot: "footer"
-            }, [a("el-button", {on: {click: e.reset}}, [e._v("重置")]), a("el-button", {
+            }, [a("el-button", {on: {click: e.reset}}, [e._v("Reset")]), a("el-button", {
                 attrs: {type: "primary"},
                 on: {click: e.confirm}
-            }, [e._v("确 定")])], 1)], 1)], 1)
+            }, [e._v("OK")])], 1)], 1)], 1)
         }, n = [], i = (a("d81d"), a("96cf"), a("1da1")), s = a("5530"), o = {
             name: "GradeManage", data: function () {
                 return {
@@ -222,19 +222,19 @@
                     dialogVisible: !1,
                     form: {name: "", manager: "", email: "", telephone: "", introducation: ""},
                     rules: {
-                        name: [{required: !0, message: "请输入年级名称"}, {min: 3, message: "年级名称不能小于3位"}],
-                        manager: [{required: !0, message: "请输入主任姓名"}, {min: 2, message: "年级名称不能小于2位"}],
-                        email: [{required: !0, message: "请输入主任邮箱"}, {
+                        name: [{required: !0, message: "Please enter the grade name"}, {min: 3, message: "The grade name cannot be less than 3 digits"}],
+                        manager: [{required: !0, message: "Please enter the name of the director"}, {min: 2, message: "The name of the grade cannot be less than 2"}],
+                        email: [{required: !0, message: "Please enter the email address of the director"}, {
                             type: "email",
-                            message: "不是合法的邮箱格式"
+                            message: "Not valid email format"
                         }],
-                        telephone: [{required: !0, message: "请输入主任电话"}, {
+                        telephone: [{required: !0, message: "Please enter the phone number of the director"}, {
                             pattern: /^[1]([3-9])[0-9]{9}$/,
-                            message: "不是合法的手机号格式"
+                            message: "Invalid phone number format"
                         }],
-                        introducation: [{required: !0, message: "请输入年级介绍"}, {
+                        introduction: [{required: !0, message: "Please enter grade introduction"}, {
                             min: 10,
-                            message: "年级介绍至少10位"
+                            message: "Introduce at least 10 grades"
                         }]
                     }
                 }
@@ -264,7 +264,7 @@
                                 case 0:
                                     return a.next = 2, t.$API.grade.removeBatch([e]);
                                 case 2:
-                                    t.$message.success("删除成功"), 1 === t.list.length && t.searchParams.pageNo > 1 && t.searchParams.pageNo--, t.getList();
+                                    t.$message.success("successfully deleted"), 1 === t.list.length && t.searchParams.pageNo > 1 && t.searchParams.pageNo--, t.getList();
                                 case 5:
                                 case"end":
                                     return a.stop()
@@ -282,7 +282,7 @@
                                         return e.id
                                     })), t.next = 3, e.$API.grade.removeBatch(a);
                                 case 3:
-                                    e.$message.success("删除成功"), e.list.length === e.selectedList.length && e.searchParams.pageNo > 1 && e.searchParams.pageNo--, e.getList();
+                                    e.$message.success("successfully deleted"), e.list.length === e.selectedList.length && e.searchParams.pageNo > 1 && e.searchParams.pageNo--, e.getList();
                                 case 6:
                                 case"end":
                                     return t.stop()
