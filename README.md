@@ -208,14 +208,14 @@ myeschool
 
 17. `postgresql`: This dependency includes the PostgreSQL JDBC driver, which allows a Spring Boot application to connect to a PostgreSQL database.
 
-
+## pom.xml file
 <details> 
  <summary><strong>Show more</strong></summary>
+
 
 ```shell
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -224,8 +224,6 @@ myeschool
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -236,27 +234,23 @@ myeschool
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-
         <!--  mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.3.1</version>
         </dependency>
-
         <!--  POJO  -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
@@ -267,7 +261,6 @@ myeschool
             <artifactId>freemarker</artifactId>
             <version>2.3.31</version>
         </dependency>
-
         <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -286,32 +279,27 @@ myeschool
             <artifactId>knife4j-spring-boot-starter</artifactId>
             <version>2.0.4</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.29</version>
         </dependency>
-
         <!-- JWT Token-->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.7.0</version>
         </dependency>
-
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
             <version>1.4</version>
         </dependency>
-
         <dependency>
             <groupId>org.lucee</groupId>
             <artifactId>postgresql</artifactId>
