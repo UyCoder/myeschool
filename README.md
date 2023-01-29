@@ -32,12 +32,12 @@ This project is an online school management system that allows administrators, t
 <details>
 <summary><strong>Show more</strong></summary>
 
-![02](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/02.png)
-![03](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/03.png)
-![04](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/04.png)
-![05](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/05.png)
-![06](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/06.png)
-![07](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/07.png)
+![02](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/02-.png)
+![03](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/03-.png)
+![04](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/04-.png)
+![05](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/05-.png)
+![06](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/06-.png)
+![07](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/07-.png)
 ![08](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/08.png)
 ![09](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/09.png)
 ![10](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/10.png)
@@ -184,10 +184,8 @@ myeschool
 1. Clone the project from the repository
 2. Import the project in intellij idea and run the maven command "mvn clean install"
 3. Run the project as Spring Boot Application
-4. Access the API documentation using Swagger at http://localhost:9001/swagger-ui.html
 
-
-## API documentation
+### API documentation
 API documentation can be accessed through swagger-ui by running the project on localhost and visiting the endpoint: http://localhost:9001/swagger-ui.html
 
 
@@ -221,4 +219,3 @@ You can find me there: </br>
 [<img src='https://www.pngall.com/wp-content/uploads/2016/07/Linkedin-Download-PNG.png' alt='linkedin' height='20'>](https://www.linkedin.com/in/ahmed-bughra/) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='20'>](https://github.com/Uycoder)
 [<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYcIooQ9bkjqGM1p-kwFPb0h4zZEVDzzRS3uhdg1sySKkvvNTE_wm5WTQWK36k7LH744w&usqp=CAU' alt='hackerrank' height='20'>](https://www.hackerrank.com/ahmedbughra)  [<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png' alt='stackoverflow' height='20'>](https://stackoverflow.com/users/16111723/ahmad-ali)
 
-<p align="right">(<a href="#Table-of-contents">Table of Contents</a>)</p>
