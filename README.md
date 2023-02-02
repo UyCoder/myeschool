@@ -1,4 +1,4 @@
-# E-School Management System
+# 🏫 E-School Management System
 
 ## 📖 Overview
 This project is an online school management system that allows administrators, teachers and students to manage and access information related to the school. The project includes modules for managing grades, classes, teachers, students, and personal information. It also includes a login and authentication system for controlling access to the different modules.
@@ -26,12 +26,12 @@ This project is an online school management system that allows administrators, t
 - Personal information management module
 - Access control
 
-## Datebase Structure
+## 🏗️ Datebase Structure
 ![database](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/Database.png)
 
 - The DML and database informations could be found in `myeschool/src/main/resources/sql/Script.sql` file.
 
-### Screenshots of the user interface:
+### 📸 Screenshots of the user interface:
 ![01](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/01.png)
 
 <details>
@@ -49,7 +49,7 @@ This project is an online school management system that allows administrators, t
  
 </details>
 
-### Screenshots for swagger file
+### 📸 Screenshots for swagger file
 ![11](https://github.com/UyCoder/myeschool/blob/master/src/main/resources/Screenshots/swagger1.png)
 <details> 
  <summary><strong>Show more</strong></summary> 
@@ -59,7 +59,23 @@ This project is an online school management system that allows administrators, t
 
 </details>
 
-## Challenges and solutions
+# 👀 Do you want to see the demo of the project?
+## 🏃How to execute the project 
+- I created jar file and H2 databse db file for the project in `ExecutableJarFileAndH2DatabseFiles` folder.
+- Download the files in `ExecutableJarFileAndH2DatabseFiles`
+- Execute the command below in CMD in the `ExecutableJarFileAndH2DatabseFiles` folder
+```shell
+java -jar myeschool-0.0.1-SNAPSHOT.jar
+```
+- `localhost:9001` to open the project
+- `localhost:9001/swagger-ui.html` to open the swagger documentation
+- `http://localhost:9001/h2-console` to open the H2 database console
+    - Driver Class : org.h2.Driver
+    - JDBC URL : jdbc:h2:file:./sql
+    - User Name : sa
+    - Password : password
+
+## 🤔 Challenges and solutions
 - `Challenge 1`: Issues with interface documentation and testing during front-end and back-end separation. 
   - `Solution`: Utilizing swagger2 for interface documentation and testing.
 
@@ -100,7 +116,7 @@ This project is an online school management system that allows administrators, t
 - Chrome as the web browser
 
 
-## Project Structure
+## 🏗️ Project Structure
 The project is structured as follows:
 <details> 
  <summary><strong>Show more</strong></summary> 
@@ -124,7 +140,7 @@ myeschool
 - The `service` directory contains the services that handle the business logic of the system. The `impl` subdirectory contains the implementation of these services.
 - The `util` directory contains utility classes used throughout the project.
 
-### Whole project file structure
+### 🏢 Whole project file structure
 <details> 
  <summary><strong>Show more</strong></summary>
 
@@ -186,7 +202,7 @@ myeschool
 
 </details>
 
-## Dependencies
+## 📦 Dependencies
 1. `spring-boot-starter`: This is a basic dependency for Spring Boot application development. It includes a set of commonly used libraries for building web applications.
 2. `spring-boot-starter-web`: This dependency includes libraries for building web applications, such as Spring MVC, tomcat, and spring web.
 3. `spring-boot-starter-test`: This dependency includes libraries for testing Spring Boot applications, such as JUnit, Hamcrest, and Mockito.
@@ -308,7 +324,7 @@ myeschool
 
 </details>
 
-### Usage
+### 📈 Usage
 - Clone the repository
 - Configure the database connection in the config package
 - Build and run the application with the command mvn spring-boot:run
@@ -317,12 +333,12 @@ myeschool
 - Use Postman to test the different endpoints
 - Use chrome to test the application
 
-### How to run the project
+### 🏃‍♀️ How to run the project
 1. Clone the project from the repository
 2. Import the project in intellij idea and run the maven command "mvn clean install"
 3. Run the project as Spring Boot Application
 
-### API documentation
+### 📄 API documentation
 API documentation can be accessed through swagger-ui by running the project on localhost and visiting the endpoint: http://localhost:9001/swagger-ui.html
 
 
